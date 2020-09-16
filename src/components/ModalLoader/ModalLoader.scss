@@ -1,0 +1,32 @@
+@import 'assets/stylesheets/_var.scss';
+
+.modal-container {
+  button {
+    background-color: $white;
+    border: none;
+    opacity: 80%;
+  }
+
+  .screenModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      img {
+        width: 9.1rem;
+        height: 1.988rem;
+      }
+
+      margin: 16px 0;
+    }
+
+    .paper {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

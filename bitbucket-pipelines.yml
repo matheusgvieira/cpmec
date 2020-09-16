@@ -1,0 +1,41 @@
+image: node:12.18.3
+
+commonBuildStep:
+  step: &commonBuildStep
+    name: Lint and Build Step
+    caches:
+      - node
+    script:
+      - yarn install
+      - yarn lint
+      - yarn build
+    artifacts:
+      - build/**
+
+commonDeployGoogleCloudStep: &commonDeployGoogleCloudStep
+  name: Deploy Google App Engine
+  script:
+    - pipe: atlassian/google-app-engine-deploy:0.2.1
+      variables:
+        KEY_FILE: $KEY_FILE
+        PROJECT: $PROJECT
+
+commonDeployFTPStep: &commonDeployFTPStep
+  name: Deploy FTP Production
+  script:
+    - pipe: atlassian/ftp-deploy:0.3.3
+      variables:
+        USER: $FTP_USER
+        PASSWORD: $FTP_PASSWORD
+        SERVER: $FTP_SERVER
+        REMOTE_PATH: '/cpmec.com.br/'
+        LOCAL_PATH: 'build/'
+
+pipelines:
+  branches:
+    dev:
+      - step: *commonBuildStep
+      - step: *commonDeployGoogleCloudStep
+    master:
+      - step: *commonBuildStep
+      - step: *commonDeployFTPStep

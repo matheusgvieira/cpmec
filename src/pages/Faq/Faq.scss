@@ -1,0 +1,65 @@
+@import 'assets/stylesheets/_var.scss';
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  header {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  main {
+    width: 100vw;
+    padding: 3% 5%;
+
+    .title {
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid $color-primary-dark;
+
+      h1 {
+        margin: 0 0 0 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: flex-end;
+      margin: 0.8rem 0;
+
+      label {
+        margin: 0;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        padding: 0.4rem;
+        margin-left: 0.8rem;
+        background-color: $color-primary-dark;
+      }
+
+      button:hover {
+        background-color: $color-primary;
+      }
+    }
+
+    .faq {
+      margin-top: 2rem;
+
+      .question-answer {
+        padding: 0.8rem;
+        margin-top: 1rem;
+        background: #f0f0f7;
+        border-radius: 4px;
+      }
+    }
+  }
+}

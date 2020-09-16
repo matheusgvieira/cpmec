@@ -1,0 +1,163 @@
+@import 'assets/stylesheets/_var.scss';
+
+.modal-plans-container {
+  button {
+    background-color: $white;
+  }
+
+  .button-nav:hover,
+  .button-nav:active {
+    font-weight: 700;
+    border-bottom: 3px solid #fff200;
+  }
+
+  .plans-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4px 8px;
+    background-color: $color-primary;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    button {
+      background-color: $color-primary;
+    }
+
+    h1 {
+      margin-top: 4px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  .plans-body {
+    .header-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.8rem;
+
+      .buttons {
+        border-radius: 16px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+        button {
+          padding: 8px 12px;
+          border: none;
+          border-radius: 4px;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        button:hover {
+          background-color: rgb(248, 248, 248);
+        }
+      }
+    }
+
+    .main-mediator,
+    .main-partner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem;
+
+      .title-mediator,
+      .title-partner {
+        display: flex;
+        align-items: center;
+        margin-top: 0.8rem;
+
+        h1 {
+          margin: 0;
+          margin-left: 8px;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        img {
+          width: 100%;
+          max-width: 45px;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      .text-plan-mediator .text-plan-partner {
+        margin-top: 8px;
+      }
+
+      .value-plan-mediator,
+      .value-plan-partner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 16px;
+        background-color: #f0f0f7;
+        border-radius: 4px;
+
+        .coins {
+          display: flex;
+          align-items: center;
+
+          p {
+            margin: 0 0 0 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+          }
+
+          img {
+            width: 100%;
+            max-width: 35px;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+
+        button {
+          padding: 4px 16px;
+          margin: -2px 2rem 0 0;
+          font-size: 1.1rem;
+          font-weight: 700;
+          border-radius: 4px;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        button:hover {
+          background-color: #fff200;
+        }
+      }
+
+      .benefits-mediator,
+      .benefits-partner {
+        display: flex;
+        grid-area: benefits-partner;
+        align-items: center;
+        padding: 8px 32px;
+        margin-top: 0.8rem;
+        background-color: #fcf575;
+        border-radius: 4px;
+
+        ul {
+          display: inline;
+          list-style-image: url('../../assets/ArrowRightIcon.png');
+
+          li {
+            padding: 0;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1078px) {
+  html {
+    font-size: 95%;
+  }
+}

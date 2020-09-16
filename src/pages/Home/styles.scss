@@ -1,0 +1,245 @@
+@import 'assets/stylesheets/_var.scss';
+
+.home-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  height: 100vh;
+
+  main {
+    display: grid;
+    grid-template-rows: 1fr 250px;
+    width: 100%;
+    margin-top: 1rem;
+
+    .main-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .main-txt {
+        h1 {
+          font-size: 3.5rem;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .h1-spotlight {
+          background-color: $color-primary;
+        }
+      }
+
+      .main-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.8rem;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .sub-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      a {
+        width: 100%;
+        color: $black;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      a:hover {
+        border-radius: 16px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), inset 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .user-button,
+      .mediator-button,
+      .attorney-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5.2rem;
+        padding: 8px;
+
+        p {
+          margin: 0 0 0 0.8rem;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+
+        img {
+          width: 100%;
+          max-width: 40px;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 16px;
+    width: 100%;
+    padding: 1rem 8px;
+    background-color: rgba(240, 236, 236, 0.6);
+
+    .img-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 45px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .img-footer:nth-child(2) {
+      img {
+        max-width: 80px;
+      }
+    }
+
+    .img-footer:nth-child(3) {
+      img {
+        max-width: 130px;
+      }
+    }
+
+    .img-footer:nth-child(4) {
+      img {
+        max-width: 120px;
+      }
+    }
+
+    .img-footer:nth-child(5) {
+      img {
+        max-width: 85px;
+      }
+    }
+  }
+}
+
+@media (min-width: 380px) {
+  .home-container {
+    main {
+      .main-block {
+        .main-txt {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    main {
+      display: grid;
+      grid-template-rows: 1fr 80px;
+      margin: 0;
+
+      .main-block {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr;
+
+        .main-txt {
+          margin-top: 2rem;
+
+          h1 {
+            padding-left: 2rem;
+            text-align: left;
+          }
+        }
+      }
+
+      .sub-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .user-button,
+        .mediator-button,
+        .attorney-button {
+          height: 5rem;
+        }
+      }
+    }
+
+    footer {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-container {
+    main {
+      display: grid;
+      grid-template-rows: 1fr 150px;
+
+      .main-block {
+        display: grid;
+        grid-template-areas:
+          '. .'
+          'main-txt main-img';
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 1.25fr;
+        height: 50rem;
+
+        .main-txt {
+          grid-area: main-txt;
+
+          h1 {
+            font-size: 7.2rem;
+          }
+        }
+
+        .main-img {
+          grid-area: main-img;
+        }
+      }
+
+      .sub-block {
+        .user-button,
+        .mediator-button,
+        .attorney-button {
+          height: 8rem;
+
+          img {
+            max-width: 70px;
+          }
+
+          p {
+            margin-left: 2rem;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    footer {
+      .img-footer img {
+        max-width: 85px;
+      }
+    }
+  }
+}

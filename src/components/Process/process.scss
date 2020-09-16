@@ -1,0 +1,101 @@
+@import 'assets/stylesheets/_var.scss';
+
+.process-content {
+  p {
+    margin: 0;
+  }
+
+  .related-people {
+    .notifying,
+    .notified {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+
+  .number-process {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem;
+    border: 1px solid $black;
+
+    strong {
+      font-size: 1.1rem;
+      color: $neutral-color-6;
+    }
+
+    .information-process {
+      display: flex;
+      align-items: center;
+
+      button {
+        background-color: $white;
+      }
+
+      .status {
+        padding: 0.2rem 0.6rem;
+        margin-right: 1rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        background-color: $neutral-color-5;
+      }
+    }
+  }
+
+  .description {
+    .area-law,
+    .subject-process,
+    .register-process {
+      display: flex;
+      align-items: center;
+      padding: 0.4rem;
+      margin-top: 0.4rem;
+      background: #e8e8fa;
+
+      p {
+        margin-left: 0.4rem;
+      }
+    }
+  }
+
+  .button-update {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    margin-top: 0.4rem;
+
+    button {
+      font-weight: 700;
+      color: $white;
+      background-color: $neutral-color-6;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .process-content {
+    .number-process {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .information-process {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        button {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

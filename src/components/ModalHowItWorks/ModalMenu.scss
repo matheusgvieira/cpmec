@@ -1,0 +1,83 @@
+@import 'assets/stylesheets/_var.scss';
+
+.modal-menu-container {
+  button {
+    background-color: $white;
+    border: none;
+  }
+
+  .modal-style {
+    background: red;
+  }
+
+  .button-nav:hover,
+  .button-nav:active {
+    font-weight: 700;
+    border-bottom: 3px solid #fff200;
+  }
+
+  .screenModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    .title-how {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 4px 8px;
+      background-color: $color-primary;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+
+      button {
+        background-color: $color-primary;
+      }
+
+      h1 {
+        margin-top: 4px;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+
+    .subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0.8rem 1rem 0 1rem;
+
+      p {
+        margin: 0;
+      }
+
+      button {
+        padding: 0.2rem 0.4rem;
+        color: $white;
+        background: $neutral-color-5;
+        border-radius: 4px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      button:hover {
+        font-weight: 700;
+        color: $black;
+        background: $color-primary;
+      }
+    }
+
+    .paper {
+      padding: 0.4rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        object-fit: contain;
+      }
+    }
+  }
+}

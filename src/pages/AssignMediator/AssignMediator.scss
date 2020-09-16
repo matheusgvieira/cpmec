@@ -1,0 +1,89 @@
+@import 'assets/stylesheets/_var.scss';
+
+.forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+
+  p {
+    margin: 0;
+  }
+
+  header {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding: 1.6rem;
+    margin-top: 3rem;
+    background: #f0f0f7;
+    border-radius: 8px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $black;
+
+      h2 {
+        margin: 0 0 0 0.4rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+
+      .types-document {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 30%;
+
+        .label-type-document {
+          display: flex;
+          align-items: center;
+
+          p {
+            margin-left: 0.4rem;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 32px;
+        margin-top: 0.8rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $black;
+        background-color: $color-primary;
+        transition: color 0.2s;
+      }
+
+      button:hover {
+        background-color: $color-primary-dark;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .forgot-password-container main {
+    width: 95%;
+
+    .title h2 {
+      font-size: 1.3rem;
+    }
+  }
+}

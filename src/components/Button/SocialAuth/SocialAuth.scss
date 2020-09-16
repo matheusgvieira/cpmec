@@ -1,0 +1,18 @@
+.btn-auth-google {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding-top: 10px;
+  background-color: transparent;
+
+  p {
+    margin: 0 0 0 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  .icon-google {
+    max-width: 40px;
+  }
+}

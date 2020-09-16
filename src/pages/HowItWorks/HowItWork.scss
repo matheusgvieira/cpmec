@@ -1,0 +1,53 @@
+@import 'assets/stylesheets/_var.scss';
+
+.how-works-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  header {
+    margin-bottom: 16px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0.4rem 0.8rem;
+      margin-bottom: 16px;
+
+      p {
+        margin: 0;
+        font-size: 0.8rem;
+      }
+
+      button {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+        color: $white;
+        background: $neutral-color-5;
+        border-radius: 4px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      button:hover {
+        font-weight: 700;
+        color: $black;
+        background: $color-primary;
+      }
+    }
+  }
+}

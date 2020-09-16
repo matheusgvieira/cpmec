@@ -1,0 +1,28 @@
+runtime: python27
+api_version: 1
+service: web
+threadsafe: true
+handlers:
+  - url: /static/js/(.*)
+    static_files: build/static/js/\1
+    upload: build/static/js/(.*)
+  - url: /static/css/(.*)
+    static_files: build/static/css/\1
+    upload: build/static/css/(.*)
+  - url: /static/media/(.*)
+    static_files: build/static/media/\1
+    upload: build/static/media/(.*)
+  - url: /(.*\.(json|ico))$
+    static_files: build/\1
+    upload: build/.*\.(json|ico)$
+  - url: /
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html
+env_variables:
+  REACT_APP_GOOGLE_CLIENT_ID: 685394004824-jogmennblfhdovd64emre9elk3gcuraa.apps.googleusercontent.com
+  REACT_APP_GOOGLE_CLIENT: wQ7TMu1sRNA1OrPnvOEN3a2h
+  REACT_APP_URL_API: https://cpmec-e0141.rj.r.appspot.com
+  SKIP_PREFLIGHT_CHECK: true

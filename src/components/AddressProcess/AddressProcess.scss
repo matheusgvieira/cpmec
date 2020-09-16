@@ -1,0 +1,38 @@
+@import 'assets/stylesheets/_var.scss';
+
+.info-notified {
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: -4px 0 4px 0;
+
+  .input-radio-notified {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0 0.4rem;
+      }
+    }
+
+    label + label {
+      margin-left: 1rem;
+    }
+  }
+
+  .address-notified {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    width: 100%;
+
+    .css-2b097c-container {
+      height: 32px;
+      margin-top: 6px;
+    }
+  }
+}

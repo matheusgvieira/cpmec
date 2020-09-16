@@ -1,0 +1,119 @@
+@import 'assets/stylesheets/_var.scss';
+
+.add-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+
+  p {
+    margin: 0;
+  }
+
+  header {
+    grid-area: header;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  footer {
+    grid-area: footer;
+    width: 100%;
+    background-color: $black;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4%;
+    margin: 16px 0 0 0;
+  }
+
+  input {
+    height: 32px;
+    padding: 0 8px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid $color-primary-dark;
+
+    h2 {
+      margin: 0;
+      margin-left: 0.4rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .data-update {
+    display: flex;
+    flex-direction: column;
+
+    .css-2b097c-container + .css-2b097c-container {
+      margin-top: 0.4rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 0.4rem;
+      resize: vertical;
+    }
+  }
+
+  .file-input {
+    display: flex;
+    flex-direction: column;
+    grid-area: file-input;
+    justify-content: flex-start;
+    margin-top: 8px;
+
+    .file-input-container:nth-child(odd) {
+      background-color: #f0f0f7;
+    }
+
+    .button-add-file {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 0.4rem;
+
+      .add-input-file {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        padding: 0.4rem;
+        background-color: $white;
+        border: 1px solid $black;
+
+        .MuiSvgIcon-root {
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }
+
+  .button-update-process {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 32px;
+      margin: 0.8rem 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $white;
+      background-color: $black;
+    }
+  }
+}

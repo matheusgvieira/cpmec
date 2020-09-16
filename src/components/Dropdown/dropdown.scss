@@ -1,0 +1,14 @@
+@import 'assets/stylesheets/_var.scss';
+
+.MuiIconButton-root {
+  width: 30px;
+  padding: 3px;
+}
+
+.MuiIconButton-label {
+  width: 30%;
+}
+
+.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded {
+  margin-top: 57px;
+}

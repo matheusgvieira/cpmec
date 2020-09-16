@@ -1,0 +1,279 @@
+@import 'assets/stylesheets/_var.scss';
+
+.my-log-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+
+  a {
+    color: $black;
+  }
+
+  header {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    margin-top: 2rem;
+
+    .related-people {
+      display: flex;
+      align-items: center;
+      padding: 0.4rem 0;
+
+      .notifying,
+      .notified {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin: 0 0 0 0.4rem;
+        }
+      }
+
+      .notified {
+        margin-left: 1rem;
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid $color-primary-dark;
+
+      .txt {
+        display: flex;
+        align-items: center;
+
+        h2 {
+          margin: 0 0 0 0.4rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .log {
+      .description {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 8px;
+
+        .area-law,
+        .subject-process,
+        .register-process {
+          display: flex;
+          align-items: center;
+          padding: 0.4rem;
+          margin-top: 0.4rem;
+          background: #e8e8fa;
+          border-radius: 4px;
+
+          p {
+            margin: 0 0 0 0.4rem;
+          }
+        }
+      }
+
+      .description-demand {
+        padding: 0.4rem;
+        margin-top: 0.8rem;
+
+        a {
+          color: $black;
+          text-decoration: none;
+
+          p {
+            margin: 0;
+            color: $black;
+          }
+        }
+      }
+
+      .files-demand {
+        padding: 0.2rem 0;
+        margin-top: 0.8rem;
+
+        ul {
+          margin-top: 1rem;
+
+          li {
+            padding: 0.4rem;
+            list-style: none;
+          }
+
+          li:nth-child(odd) {
+            background-color: #f0f0f7;
+          }
+
+          li:nth-child(even) {
+            background-color: $white;
+          }
+        }
+      }
+
+      .logs {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        .title-process {
+          h1 {
+            padding: 0;
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-bottom: 2px solid #e8e8fa;
+          }
+        }
+
+        .content {
+          padding-left: 1rem;
+          margin-top: 0.8rem;
+
+          ul {
+            display: inline;
+            list-style-image: url('../../assets/ArrowRightIcon.png');
+
+            li {
+              padding: 0;
+              margin-bottom: 10px;
+
+              .andamento {
+                display: flex;
+                flex-direction: column;
+                padding: 8px;
+                background: #e8e8fa;
+                border-radius: 4px;
+
+                .files {
+                  display: flex;
+                  align-items: center;
+
+                  p {
+                    margin: 0 0 0 0.4rem;
+                  }
+                }
+
+                .title-log {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 8px;
+                  border-bottom: rgb(170, 170, 170) solid 1px;
+
+                  .info-main-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 80%;
+                  }
+
+                  .delete-log {
+                    background: none;
+                  }
+
+                  h5 {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                  }
+
+                  h6 {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    line-height: 8px;
+                    color: #555;
+                  }
+
+                  .log-people {
+                    display: flex;
+
+                    strong {
+                      margin-right: 0.4rem;
+                      font-size: 0.9rem;
+                      line-height: 8px;
+                    }
+
+                    h5 {
+                      margin-right: 1rem;
+                      font-size: 0.9rem;
+                      line-height: 8px;
+                      color: #555;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .my-log-container {
+    main {
+      padding: 0 0.8rem;
+
+      .related-people {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0.4rem 0;
+
+        .notifying,
+        .notified {
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+        }
+
+        .notified {
+          margin-left: 0;
+        }
+      }
+
+      .log {
+        .description {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: 1fr;
+          grid-gap: 8px;
+        }
+
+        .logs {
+          .content {
+            ul {
+              li {
+                .andamento {
+                  .title-log {
+                    button {
+                      margin-bottom: 20px;
+                    }
+
+                    .info-main-title {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: start;
+
+                      h6 {
+                        margin-bottom: 0.8rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

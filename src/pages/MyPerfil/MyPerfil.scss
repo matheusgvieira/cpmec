@@ -1,0 +1,144 @@
+@import 'assets/stylesheets/_var.scss';
+
+.my-profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 10vh;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.4rem;
+    margin-top: 2rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid $color-primary-dark;
+
+      h2 {
+        margin: 0 0 0 0.4rem;
+        font-weight: 700;
+      }
+    }
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      input {
+        display: none;
+      }
+
+      .fileIcon {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 60px 0 0 -60px;
+        cursor: pointer;
+        background-color: $color-primary-dark;
+        border-radius: 50%;
+        transition: 0.2s;
+      }
+
+      .fileIcon:hover {
+        opacity: 80%;
+      }
+    }
+
+    .information {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 2rem;
+      margin-top: 1rem;
+
+      .input-block {
+        width: 100%;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.4rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $white;
+        background-color: #555;
+      }
+
+      strong {
+        width: 50%;
+        text-align: center;
+        border-bottom: 1px solid $black;
+      }
+
+      p {
+        margin-top: 0.49rem;
+      }
+
+      button + button {
+        margin-left: 8px;
+        color: $white;
+        background-color: green;
+      }
+
+      button:disabled {
+        opacity: 60%;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .my-profile-container {
+    main {
+      padding: 0 5rem;
+
+      .avatar-information {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 24px;
+
+        .avatar {
+          margin-top: -100px;
+        }
+
+        .information {
+          margin-top: 2rem;
+
+          strong {
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px solid $black;
+          }
+
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

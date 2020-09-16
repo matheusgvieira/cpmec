@@ -1,0 +1,59 @@
+@import 'assets/stylesheets/_var.scss';
+
+.my-account-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 10vh;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.4rem;
+    margin-top: 2rem;
+
+    .title {
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid $color-primary-dark;
+
+      h2 {
+        margin: 0 0 0 0.4rem;
+        font-weight: 700;
+      }
+    }
+
+    .delete {
+      padding: 0.8rem;
+      margin-top: 1rem;
+      border: 2px solid rgb(238, 130, 130);
+      border-radius: 8px;
+
+      h3 {
+        color: red;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem;
+        font-weight: 700;
+        color: $white;
+        background-color: red;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .my-account-container {
+    main {
+      padding: 0 3rem;
+
+      .delete {
+        width: 50%;
+      }
+    }
+  }
+}
